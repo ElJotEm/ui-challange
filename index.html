@@ -10,7 +10,75 @@
 </head>
 
 <body>
-  <p>Hello world!</p>
+  <div class="header">
+      <div class="header-logo">
+          <img src="assets/svg/logo.svg">
+      </div>
+      <div class="header-contact">
+          <span class="header-contact_text">Kostenlose Service-Hotline</span>
+
+          <a href="tel:+498005008002"><img src="assets/img/icon-phone.png"> <span>0800 500 80 02</span></a>
+      </div>
+  </div>
+  <div class="wrapper">
+      <div class="info">
+          <h1>Vielen Dank für Ihr Interesse an der von uns angebotenen Immobilie.</h1>
+          <p>Im Folgenden finden Sie alle verfügbaren Unterlagen zum Download.</p>
+      </div>
+      <div class="downloads">
+          <div class="downloads-info">
+              <img src="assets/img/house.png">
+              <div class="downloads-info_block">
+                  <!--TODO Insert info list -->
+                  <table>
+                      <tr>
+                          <th>our ID</th>
+                          <th>123456789<th>
+                      </tr>
+                      <tr>
+                          <th>adress</th>
+                          <th>Finkenweg 81a, 12357 Berlin</th>
+                      </tr>
+                      <tr>
+                          <th>price</th>
+                          <th>213.000€</th>
+                      </tr>
+                      <tr>
+                          <th>total floor space</th>
+                          <th>254m<sup>2</sup></th>
+                      </tr>
+                      <tr>
+                          <th>rooms</th>
+                          <th>7</th>
+                      </tr>
+                  </table>
+
+              </div>
+              <button class="button_download">Download Expose</button>
+          </div>
+          <input type="checkbox" name="select-all-files"><label class="downloads_selectedItems">0/5<!--TODO replace with JS (selected_items / array.length)--></label>
+          <div class="downloads-files">
+              <!--TODO
+                - To fill this section with data, use NodeJS fs function to create an array of all files in the expose's directory
+                - file images based on file type
+                - preview & download link filled with file path / preview function
+                - downloads-files_item_name = file name or via CMS
+                - downloads-files_item_description generic based on file type or added via CMS
+                -->
+              <div class="downloads-files_multipleItems">
+              </div>
+              <div class="downloads-files_item">
+                  <input type="checkbox" name="item_2" value="expose">
+                  <img>
+                  <p class="downloads-files_item_name">Test Street 123</p>
+                  <p class="downloads-files_item_description">Building Plan, Images, Ground Plot, Entry in the land register</p>
+                  <a href="#view_item"><img></a>
+                  <a href="#download_item"><img></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
 
   <script src="./index.js"></script>
 </body>

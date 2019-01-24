@@ -1,3 +1,145 @@
-p {
-    color: green;
+@import 'variables.scss';
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    padding: 10px 30px 30px;
+    border-bottom: solid 2px $c-border;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-contact{
+    color: $c-light-grey;
+    font-family: sans-serif;
+    font-size: 1em;
+
+    .header-contact_text {
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+
+        img {
+            height: 1em;
+            width: auto;
+            margin: 0 10px 0 30px;
+
+            @media screen and (max-width: $phone) {
+                height: 40px;
+            }
+        }
+
+        span {
+            text-decoration: underline;
+            font-weight: bold;
+
+            @media screen and (max-width: $phone){
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 576px) and (max-width: $tablet) {
+            border-left: solid 2px $c-border;
+        }
+    }
+}
+
+.header-logo {
+    img {
+        height: 50px;
+        width: auto;
+    }
+}
+
+.wrapper {
+    max-width: $tablet;
+    margin: 150px auto;
+}
+
+.info {
+    text-align: center;
+    padding: 0 10%;
+    h1 {
+        margin: 0;
+        font-weight: 500;
+        font-size: 3em;
+    }
+    p {
+        margin: 5px 0 50px;
+        font-family: sans-serif;
+        font-size: 1.5em;
+        font-weight: 100;
+    }
+}
+
+.downloads {
+    padding: 20px;
+
+    @media screen and (min-width: $tablet) {
+        border: solid 2px $c-border;
+    }
+
+    .downloads-info {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        img {
+            margin-bottom: 10px;
+        }
+
+    }
+
+    .downloads-info_block {
+        font-family: sans-serif;
+        text-align: left;
+
+        th {
+            padding: 10px;
+        }
+
+        th:first-child {
+            color: #bbbbbb;
+            text-transform: uppercase;
+        }
+    }
+
+    .button_download {
+        -webkit-appearance: none;
+        border: none;
+        border-radius: 3px;
+        border-bottom: solid 2px #e6a800;
+        background-color: #feba00;
+        cursor: pointer;
+        color: #fff;
+        font-size: 14pt;
+        padding: 10px 20px;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: #ffd257;
+            border-bottom: none;
+            margin-top: 2px;
+        }
+    }
 }
